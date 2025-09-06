@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #0c212f;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+main{
+    background-color: #0c212f;
+    color: white;
+}
+
+#about, #projects, #contact{
+    background-color: #485e7b;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin: 20px 20px 0px 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.banner {
+  background-image: url("../image/banner.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+section {
+  padding: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form input:focus, form textarea:focus {
+  border-color: blue;
+  outline: none;
+}
+
+button {
+  background: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(175, 175, 190);
+}
+
+
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 10px;
+}
