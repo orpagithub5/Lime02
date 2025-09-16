@@ -1,0 +1,141 @@
+/* Very simple beginner-ish CSS */
+*{ box-sizing: border-box; }
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#222;
+  background:#f8f3e8; /* light warm */
+}
+
+/* top bar */
+.topbar{
+  display:block;
+  padding:14px 18px;
+  background:#fff7e6;
+
+}
+.logo{ 
+  float:left; 
+  font-weight:bold; 
+}
+.menu{
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+.menu li{ display:inline-block; margin:0 12px; }
+.menu a{ text-decoration:none; color:#777; }
+.icons{ float:right; }
+.icons span{ margin-left:10px; }
+
+/* clear floats */
+.topbar::after{ content:''; display:block; clear:both; }
+
+/* hero */
+.hero{
+  padding:40px 18px;
+  min-height:70vh;
+  position:relative;
+  overflow:hidden;
+}
+
+.left{
+  max-width:520px;
+}
+
+h1{
+  font-size:44px;
+  line-height:1.1;
+  margin:10px 0 12px;
+}
+.bold{ font-weight:800; }
+.yellow{ color:#d1bb3f; font-weight:700; }
+
+.sub{
+  color:#666;
+  margin:10px 0 18px;
+}
+
+.btn{
+  display:inline-block;
+  background:#f2d139;
+  padding:12px 18px;
+  text-decoration:none;
+  color:#222;
+  border-radius:4px;
+  font-weight:bold;
+  border:2px solid #d8bd32;
+}
+
+.dots{ margin-top:26px; }
+.dot{
+  width:8px; height:8px; border-radius:50%;
+  background:#d0c9b0; display:inline-block; margin-right:6px;
+}
+.dot.active{ background:#f2d139; }
+
+/* right image side */
+.right{
+  position:absolute;
+  right:0;
+  top:60px;
+  width:50%;
+  text-align:center;
+}
+
+/* very simple chopsticks look */
+.sticks{
+  position:absolute;
+  right:70px;
+  top:-8px;
+  transform:rotate(-15deg);
+  font-weight:bold;
+  color:#c8b879;
+  letter-spacing:6px;
+}
+
+/* flat circles like the reference */
+.hero::before,
+.hero::after{
+  content:''; position:absolute;
+  border-radius:50%;
+  background:#e9e2c6;
+  z-index:-1;
+}
+.hero::before{
+  width:360px; height:360px; left:-120px; top:-40px;
+}
+.hero::after{
+  width:420px; height:420px; right:-120px; top:0;
+}
+
+/* small black sesame dots */
+.right::after{
+  content:''; position:absolute;
+  width:16px; height:10px;
+  background:#222;
+  border-radius:50%;
+  right:40%;
+  top:60%;
+  filter:blur(2px);
+}
+
+/* basic responsiveness without flex/grid */
+@media (max-width: 900px){
+  .right{
+    position:static;
+    width:100%;
+    margin-top:20px;
+  }
+  .food{ width:260px; }
+  .hero{ text-align:center; }
+  .left{ margin:0 auto; }
+}
+
+.footer-note{
+  text-align:center;
+  padding:18px;
+  color:#888;
+  font-size:12px;
+}

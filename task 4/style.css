@@ -1,0 +1,55 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#eef1f6;color:#222}
+
+/* nav */
+.nav{max-width:1100px;margin:20px auto 10px;padding:8px 10px}
+.nav a{text-decoration:none;color:#9aa3b2;font-weight:bold;margin-right:26px}
+.nav a.active,.nav a:hover{color:#111}
+
+/* white card */
+.card{max-width:1100px;margin:0 auto;background:#fff;padding:18px;border-radius:22px;
+      box-shadow:0 18px 40px rgba(0,0,0,.12)}
+
+/* red hero */
+.hero{
+  background:#c63b3b;border-radius:20px;padding:40px;             
+  min-height:560px;                                               
+  display:flex;align-items:center;position:relative;overflow:hidden;
+}
+.left{width:50%}
+.left h1{color:#fff;font-size:64px;line-height:1;letter-spacing:1px;margin-bottom:14px;font-weight:800}
+.left .dot{color:#fff}
+.desc{color:#f2f5f9;opacity:.95;max-width:520px;margin-bottom:22px}
+.btn{background:#fff;color:#111;border:none;padding:12px 16px;border-radius:12px;
+     font-weight:bold;box-shadow:0 8px 18px rgba(0,0,0,.15);cursor:pointer}
+
+/* character image*/
+.girl{
+  position:absolute;
+  right:-74px;          
+  bottom:0;      
+  width:auto;
+  filter:drop-shadow(0 14px 24px rgba(0,0,0,.25));
+  user-select:none;pointer-events:none;
+}
+
+/* hearts */
+.heart{position:absolute;width:60px;height:60px;background:#fff;color:#c63b3b;border-radius:50%;
+       display:flex;align-items:center;justify-content:center;font-weight:800;
+       box-shadow:0 10px 22px rgba(0,0,0,.18)}
+.heart1{right:270px;top:90px}     
+.heart2{right:270px;bottom:90px}  
+
+/* scroll */
+.scroll{max-width:1100px;margin:10px auto 30px;display:flex;align-items:center;gap:10px;color:#3a4151;font-weight:500}
+.scroll .circle{width:26px;height:26px;border:2px solid #3a4151;border-radius:50%;
+                display:grid;place-items:center}
+
+/* simple mobile tweak */
+@media (max-width:900px){
+  .hero{flex-direction:column;min-height:440px}
+  .left{width:100%}
+  .girl{right:-10px;height:420px}
+  .heart1{right:22%;top:12%}
+  .heart2{right:24%;bottom:12%}
+}
